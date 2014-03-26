@@ -1,0 +1,25 @@
+{
+    "title": "US food price outlook (2012-2014)",
+    "description": "cleaned csv data, including (1) US food price change precent in 2012,2013 and 2013(forecast), and (2) relative importance of each food category",
+    "source": "http://catalog.data.gov/dataset/food-price-outlook/resource/ed2b9497-f153-4380-9090-6c6828c826cd",
+    "raw_data": "http://www.ers.usda.gov/datafiles/Food_Price_Outlook/Food_Price_Outlook/CPIforecast.xls",
+    "csv_data": "https://raw.githubusercontent.com/lidingpku/mdata/master/data/2014-food-price-forecast.csv",
+    "changes": [
+        "2014-03-25 DONE. cleaned raw data, generate google spreadsheet and corresponding visualization demo.",
+        "2014-03-25 TODO. importance percentage does not sum up to 100%. "
+    ],
+    "demos": [
+        {
+            "title": "interactive demo via google spreedsheet",
+            "link": "https://docs.google.com/spreadsheet/pub?key=0Al9lLCZTXJQ2dFdlXzU1WVFzUE5lbXNEZkZObHVDZkE&output=html"
+        },
+        {
+            "title": "heatmap screenshot showing relative importance of each food category",
+            "link": "https://raw.githubusercontent.com/lidingpku/mdata/master/data/2014-food-price-forecast.heatmap.png"
+        },
+        {
+            "title": "barchart screenshot showing US food price 2012,2013 and 2013(forecast)",
+            "link": "https://raw.githubusercontent.com/lidingpku/mdata/master/data/2014-food-price-forecast.barchart.png"
+        }
+    ]
+}
