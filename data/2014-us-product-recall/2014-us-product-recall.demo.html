@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width; initial-scale=1; " />
+
+    <link rel="stylesheet" href="http://www.simile-widgets.org/styles/common.css" type="text/css"/>
+    <script src="http://trunk.simile-widgets.org/exhibit/api/exhibit-api.js"></script>
+    <link href="2014-us-product-recall.clean.json" rel="exhibit/data" type="application/json"/>
+
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <title>2014 US Product Recall Index</title>
+
+    <style>
+    body{
+        background:#EEE;
+    }
+
+    .card-container {
+        width:400px;
+        height:220px;
+        margin:10px;
+    }
+    .card {
+        width:380px;
+        height:200px;
+        background:#FEFEFE;
+        margin:5px;
+        padding: 5px;
+        border-radius:4px;
+        overflow:hide;
+    }
+
+    .card img{
+        min-width:90px;
+        max-height:120px;
+        max-width:120px;
+        margin:10px;
+        float:right;
+    }
+
+    .card .title{
+        margin:5px;
+        font-size:16px;
+        font-weight:bold;
+        display:block;
+        overflow:hide;
+    }
+
+    .card .info{
+        display:block;
+        margin: 2px;
+        padding:3px;
+    }
+
+    .card .description{
+        margin:5px;
+        display: block;
+        text-overflow: ellipsis;
+        width:250px;
+        overflow:hide;
+    }
+    </style>
+
+    <script type='text/javascript'>//<![CDATA[
+
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+        //]]>
+    </script>
+</head>
+
+
+<body>
+
+
+
+<div style="display:table-cell; width: 160px">
+    <div>
+        <h1>US Product Recall Index</h1>
+        Created by Li Ding(<a href="https://twitter.com/twitterapi" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @lidingpku</a>)
+        using US open government data (<a href="http://catalog.data.gov/dataset/all-product-recalls">source</a>).
+        Also see <a href="http://lidingpku.github.io/mdata/data/2014-us-product-recall/2014-us-product-recall.homepage.html">cleaned data</a>.
+    </div>
+
+    <div style="display:block;width:150px" ex:role="facet" ex:facetClass="TextSearch" ex:facetLabel="search"></div>
+    <div style="display:block;width:150px" ex:role="facet" ex:expression=".tags" ex:facetLabel="Tags"   ex:sortMode="count" ex:height="300px" ></div>
+
+    <div style="display:block;width:150px" ex:role="facet" ex:expression=".month:iso" ex:facetLabel="Month" ex:sortDirection="reverse" ex:height="300px" ></div>
+</div>
+
+<div style="display:table-cell;width:10px">
+</div>
+
+<div ex:role="viewPanel" style="display:table-cell">
+    <div ex:role="view"
+         ex:viewClass="Thumbnail"
+         ex:label="Card View"
+         ex:orders=".month:iso, .title"
+         ex:showAll="false"
+
+         ex:directions="descending">
+
+        <div ex:role="lens" class="card-container">
+            <div class="card">
+                <div class="title" ex:content=".title"></div>
+                <img ex:src-content=".feature_image" />
+
+                <div class="info">
+                    <span ex:content=".date:iso"></span>
+                    <a target="_blank" ex:href-content=".source">source</a>
+                </div>
+
+
+                <div class="description" ex:content=".description"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+
+<!--
+
+
+
+<div ex:role="viewPanel">
+    <div ex:role="view"
+        ex:viewClass="Thumbnail"
+        ex:label="Card View"
+        ex:orders=".date, .label"
+        ex:showAll="true"
+        ex:directions="descending">
+
+
+        <div ex:role="lens" style="width:100px; height:100px">
+
+                <span ex:content=".title"></span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div ex:role="exhibit-controlPanel" ></div>
+
+                <a target="_blank" ex:href-content=".link" >
+                    <img ex:src-content=".feature_image" style=""/>
+                </a>
+                <div ex:value-content=".title"></div>
+                <div ex:value-content=".description"></div>
+-->
