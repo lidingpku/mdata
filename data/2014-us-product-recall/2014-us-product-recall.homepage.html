@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+            <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                <meta name="viewport" content="width=device-width; initial-scale=1; " />
+                <link rel="stylesheet" href="http://emma.memect.com/static/css/clip.css" type="text/css" />
+                <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+                <script type='text/javascript' src="http://twitter.github.com/hogan.js/builds/2.0.0/hogan-2.0.0.js"></script>
+
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image:src" content="http://lidingpku.github.io/mdata/data/2014-us-product-recall/2014-us-product-recall.cards.png" />
+        <meta name="twitter:description" content="cleaned csv/json data for the orginal xml rss feed." />
+        <meta name="twitter:title" content="US Product Recall Index (2012-10 to 2014-03)" />
+        <meta name="title" content="US Product Recall Index (2012-10 to 2014-03)" />
+
+
+    <script id="card-template" type="text/template">
+      <img src="{{feature_image}}" style="float:right; height:400px; padding:5px; margin:5px; border:1px solid #EEE; background:white" />
+      <h1>  {{title}} </h1>
+      <div> <b>Description:</b> {{description}} </div>
+      <div>
+           <b> Links: </b>
+          <a href="{{source}}"> source </a>  &nbsp;
+          {{#raw_data}}
+              <a href="{{raw_data}}"> raw data </a>  &nbsp;
+          {{/raw_data}}
+          {{#csv_data}}
+            <a href="{{csv_data}}"> csv data </a>  &nbsp;
+          {{/csv_data}}
+      </div>
+
+      <h2>Demos</h2>
+      <ul>
+      {{#demos}}
+        <li>    <a href="{{link}}"> {{title}} </a> </li>
+      {{/demos}}
+      </ul>
+
+      <h2>Changes</h2>
+      <ul>
+      {{#changes}}
+          <li> {{.}} </div>
+      {{/changes}}
+      </ul>
+
+    </script>
+
+
+<script type='text/javascript'>//<![CDATA[
+
+$.getJSON("2014-us-product-recall.metadata.json", function(json) {
+
+    console.log(json); // this will show the info it in firebug console
+
+    //alert( $("#card-template").html() )
+
+    var template = Hogan.compile(  $("#card-template").html() );
+    var output = template.render(json);
+    $('#card').html(output);
+
+//    alert(document.getElementsByTagName('head')[0].innerHTML.length)
+//    var template = Hogan.compile(  $("#metadata-template").html() );
+//    var output = template.render(json);
+//    document.getElementsByTagName('head')[0].innerHTML +=output;
+//    alert(document.getElementsByTagName('head')[0].innerHTML.length)
+
+
+});
+
+
+//]]>
+</script>
+
+            </head>
+            <body>
+    <div id="card">
+      loading...
+    </div>
+            </body>
+</html>

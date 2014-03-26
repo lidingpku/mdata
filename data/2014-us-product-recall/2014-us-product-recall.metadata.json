@@ -1,0 +1,19 @@
+{
+    "title": "US Product Recall Index (2012-10 to 2014-03)",
+    "description": "cleaned csv/json data for the orginal xml rss feed.",
+    "source": "http://catalog.data.gov/dataset/all-product-recalls",
+    "raw_data": "http://www.cpsc.gov/cpscpub/prerel/prerel.xml",
+    "csv_data": "http://lidingpku.github.io/mdata/data/2014-us-product-recall/2014-us-product-recall.cleaned.csv",
+    "json_data": "http://lidingpku.github.io/mdata/data/2014-us-product-recall/2014-us-product-recall.cleaned.json",
+    "feature_image": "http://lidingpku.github.io/mdata/data/2014-us-product-recall/2014-us-product-recall.cards.png",
+    "changes": [
+        "2014-03-26 DONE. cleaned raw data into csv/json version",
+        "2014-03-26 DONE. create exhibit 2.0 (http://simile.mit.edu/wiki/Exhibit) demo",
+    ],
+    "demos": [
+        {
+            "title": "interactive demo via MIT exhibit",
+            "link": "http://lidingpku.github.io/mdata/data/2014-us-product-recall/2014-us-product-recall.demo.html"
+        }
+    ]
+}
