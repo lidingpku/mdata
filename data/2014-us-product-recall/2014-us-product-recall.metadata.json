@@ -8,7 +8,7 @@
     "feature_image": "http://lidingpku.github.io/mdata/data/2014-us-product-recall/2014-us-product-recall.cards.png",
     "changes": [
         "2014-03-26 DONE. cleaned raw data into csv/json version",
-        "2014-03-26 DONE. create exhibit 2.0 (http://simile.mit.edu/wiki/Exhibit) demo",
+        "2014-03-26 DONE. create exhibit 2.0 (http://simile.mit.edu/wiki/Exhibit) demo"
     ],
     "demos": [
         {
