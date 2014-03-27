@@ -10,10 +10,10 @@
 
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:image:src" content="http://lidingpku.github.io/mdata/data/2014-us-product-recall/2014-us-product-recall.cards.png" />
-        <meta name="twitter:description" content="cleaned csv/json data for the orginal xml rss feed." />
-        <meta name="twitter:title" content="US Product Recall Index (2012-10 to 2014-03)" />
-        <meta name="title" content="US Product Recall Index (2012-10 to 2014-03)" />
+        <meta name="twitter:image:src" content="http://lidingpku.github.io/mdata/data/2014-google-user-data/2014-google-user-data.country.png" />
+        <meta name="twitter:description" content="CSV dataset showing how Google receives and handles requests from governments and courts around the world to hand over user data." />
+        <meta name="twitter:title" content="Request from Governments for Google User Data (2009 to 2013)" />
+        <meta name="title" content="Request from Governments for Google User Data (2009 to 2013)" />
 
 
     <script id="card-template" type="text/template">
@@ -34,6 +34,7 @@
       </div>
 
       <h2>Demos</h2>
+
       <div style="overflow: hidden">
       {{#demos}}
         <div class="card" style="width:300px; height:250px; overflow:hidden; float:left; display:block; background:white; padding:5px; margin:5px;">
@@ -51,7 +52,7 @@
       <h2>Changes</h2>
       <ul>
       {{#changes}}
-          <li> {{.}} </div>
+          <li> {{.}} </li>
       {{/changes}}
       </ul>
 
@@ -60,7 +61,7 @@
 
 <script type='text/javascript'>//<![CDATA[
 
-$.getJSON("2014-us-product-recall.metadata.json", function(json) {
+$.getJSON("2014-google-user-data.metadata.json", function(json) {
 
     console.log(json); // this will show the info it in firebug console
 

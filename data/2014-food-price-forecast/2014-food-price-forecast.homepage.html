@@ -10,12 +10,20 @@
 
 
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:image:src" content="http://lidingpku.github.io/mdata/data/2014-us-product-recall/2014-us-product-recall.cards.png" />
-        <meta name="twitter:description" content="cleaned csv/json data for the orginal xml rss feed." />
-        <meta name="twitter:title" content="US Product Recall Index (2012-10 to 2014-03)" />
-        <meta name="title" content="US Product Recall Index (2012-10 to 2014-03)" />
+        <meta name="twitter:image:src" content="http://lidingpku.github.io/mdata/data/2014-food-price-forecast/2014-food-price-forecast.heatmap.png" />
+        <meta name="twitter:description" content="cleaned csv data, including (1) US food price change precent in 2012,2013 and 2013(forecast), and (2) relative importance of each food category" />
+        <meta name="twitter:title" content="US food price outlook (2012 to 2014)" />
+        <meta name="title" content="US food price outlook (2012 to 2014)" />
 
-
+<!--
+    <script id="metadata-template" type="text/template">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image:src" content="{{feature_image}}" />
+        <meta name="twitter:description" content="{{description}}" />
+        <meta name="twitter:title" content="{{title}}" />
+        <meta name="title" content="{{title}}" />
+    </script>
+-->
     <script id="card-template" type="text/template">
       <h1>  {{title}} </h1>
       <div> <b>Description:</b> {{description}} </div>
@@ -26,11 +34,8 @@
               <a href="{{raw_data}}"> raw data </a>  &nbsp;
           {{/raw_data}}
           {{#csv_data}}
-            <a href="{{csv_data}}"> CSV cleaned data </a>  &nbsp;
+            <a href="{{csv_data}}"> csv data </a>  &nbsp;
           {{/csv_data}}
-          {{#json_data}}
-            <a href="{{csv_data}}"> JSON cleaned data </a>  &nbsp;
-          {{/json_data}}
       </div>
 
       <h2>Demos</h2>
@@ -48,6 +53,8 @@
       <div style="clear:both"/>
       </div>
 
+
+
       <h2>Changes</h2>
       <ul>
       {{#changes}}
@@ -60,7 +67,7 @@
 
 <script type='text/javascript'>//<![CDATA[
 
-$.getJSON("2014-us-product-recall.metadata.json", function(json) {
+$.getJSON("2014-food-price-forecast.metadata.json", function(json) {
 
     console.log(json); // this will show the info it in firebug console
 

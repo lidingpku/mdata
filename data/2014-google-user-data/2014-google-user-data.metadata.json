@@ -1,0 +1,22 @@
+{
+    "title": "Request from Governments for Google User Data (2009 to 2013)",
+    "description": "CSV dataset showing how Google receives and handles requests from governments and courts around the world to hand over user data.",
+    "source": "http://www.google.com/transparencyreport/userdatarequests/data/",
+    "raw_data": "http://www.google.com/transparencyreport/userdatarequests/google-user-data-requests.csv?hl=en_US",
+    "image": "http://lidingpku.github.io/mdata/data/2014-google-user-data/2014-google-user-data.country.png",
+    "changes": [
+        "2014-03-27 DONE. generate two image demos"
+    ],
+    "demos": [
+        {
+            "title": "Top Countries Requesting for User Data and Their Success Rate",
+            "source": "https://docs.google.com/spreadsheet/pub?key=0Al9lLCZTXJQ2dDVBaU9GQTR6cnZqRm01TVcybXJNb2c&single=true&gid=4&output=html",
+            "image":"http://lidingpku.github.io/mdata/data/2014-google-user-data/2014-google-user-data.country.png"
+        },
+        {
+            "title": "World map showing Countries Requesting for User Data",
+            "source": "https://docs.google.com/spreadsheet/pub?key=0Al9lLCZTXJQ2dDVBaU9GQTR6cnZqRm01TVcybXJNb2c&single=true&gid=8&output=html",
+            "image": "http://lidingpku.github.io/mdata/data/2014-google-user-data/2014-google-user-data.map.png"
+        }
+    ]
+}
