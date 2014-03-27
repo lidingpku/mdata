@@ -5,6 +5,7 @@
     "raw_data": "http://www.ers.usda.gov/datafiles/Food_Price_Outlook/Food_Price_Outlook/CPIforecast.xls",
     "csv_data": "http://lidingpku.github.io/mdata/data/2014-food-price-forecast/2014-food-price-forecast.csv",
     "image": "http://lidingpku.github.io/mdata/data/2014-food-price-forecast/2014-food-price-forecast.heatmap.png",
+    "homepage": "http://lidingpku.github.io/mdata/data/2014-food-price-forecast/2014-food-price-forecast.homepage.html",
     "changes": [
         "2014-03-25 DONE. cleaned raw data, generate google spreadsheet and corresponding visualization demo.",
         "2014-03-25 TODO. importance percentage does not sum up to 100%. "
