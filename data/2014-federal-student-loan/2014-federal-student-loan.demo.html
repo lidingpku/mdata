@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+            <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+                <meta name="viewport" content="width=device-width; initial-scale=1; " />
+                <link rel="stylesheet" href="http://emma.memect.com/static/css/clip.css" type="text/css" />
+                <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+                <script type='text/javascript' src="http://twitter.github.com/hogan.js/builds/2.0.0/hogan-2.0.0.js"></script>
+
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image:src" content="http://lidingpku.github.io/mdata/data/2014-federal-student-loan/2014-federal-student-loan.tile.png" />
+        <meta name="twitter:description" content="This demo shows the average federal award from Federal Work-Study(FWS) at state level on Map. It also includes background information (ie. poverty and population) from US census." />
+        <meta name="twitter:title" content="Federal student aid data on Map(2012-13)" />
+        <meta name="title" content="Federal student aid data on Map(2012-13)" />
+
+  <script id="card-template" type="text/template">
+         <div class="card" style="width:500px; max-height:400px; overflow:hidden; float:left; display:block; background:white; padding:5px; margin:5px;">
+            <div style="width:500px; max-height:350px; overflow:hidden;padding-bottom:10px;">
+                <img src="{{image}}" style="width:500px; " />
+            </div>
+            <div>
+                <a  href="{{homepage}}">  {{title}} </a>
+            </div>
+            <div style="font-size:11px;">
+                {{notes}}
+            </div>
+        </div>
+    </script>
+
+    <script type='text/javascript'>//<![CDATA[
+    //http://studentaid.ed.gov/sites/default/files/fsawg/datacenter/library/2012-13CampusBasedFunding.xls
+    var json_demo_data =  [
+        {
+            "notes": "Alaska($2923) > Utah($2,200) > DC(1,815) > California($1,636) > Iowa($872) --- (* Aggregated based on school location.)",
+            "image": "chart_average_fws.png",
+            "title": "$ Federal Award per recipient (Federal Work-Study, FWS): 2012-13",
+            "homepage": "https://docs.google.com/spreadsheet/pub?key=0Al9lLCZTXJQ2dF9LU0NMbVkwcEZuV2R1TzRuOFhVZ2c&single=true&gid=8&output=html"
+        },
+        {
+            "notes": "California(62,856) > Iowa(14,757) > Alaska(8,085) > DC(5186) > Utah(2,404) --- (* Aggregated based on school location.)",
+            "image": "chart_recipients_fws.png",
+            "title": "Recipients (Federal Work-Study, FWS): 2012-13",
+            "homepage": "https://docs.google.com/spreadsheet/pub?key=0Al9lLCZTXJQ2dF9LU0NMbVkwcEZuV2R1TzRuOFhVZ2c&single=true&gid=10&output=html"
+        },
+        {
+            "notes": "DC(18.2%) > California(17.0%) > Utah(12.8%) > Iowa(12.7%) > Alaska(10.1%)",
+            "image": "2012-percent-poverty.png",
+            "title": "Percentage of People in Poverty for  States and Puerto Rico: 2012",
+            "homepage": "http://www.census.gov/prod/2013pubs/acsbr12-01.pdf"
+        },
+        {
+            "notes": "California(38,332,521) > Iowa(3,090,416)  > Utah(2,900,872) > Alaska(735,132) > DC(646,449)",
+            "image": "http://www.census.gov/popest/data/maps/2012/pop_size2012.jpg",
+            "title": "Population for States and Puerto Rico: 2012",
+            "homepage": "http://www.census.gov/popest/data/maps/2012/popsize-2012.html"
+        },
+    ]
+
+    var json_demo_data2 =  [
+        {
+            "image": "chart_average_fws.png",
+            "title": "$ Federal Award per recipient (Federal Work-Study, FWS): 2012-13",
+            "homepage": "https://docs.google.com/spreadsheet/pub?key=0Al9lLCZTXJQ2dF9LU0NMbVkwcEZuV2R1TzRuOFhVZ2c&single=true&gid=8&output=html"
+        },
+        {
+            "image": "chart_recipients_fws.png",
+            "title": "Recipients (Federal Work-Study, FWS): 2012-13",
+            "homepage": "https://docs.google.com/spreadsheet/pub?key=0Al9lLCZTXJQ2dF9LU0NMbVkwcEZuV2R1TzRuOFhVZ2c&single=true&gid=10&output=html"
+        },
+        {
+            "image": "chart_award_fws.png",
+            "title": "Total $ Federal Award (Federal Work-Study, FWS): 2012-13",
+            "homepage": "https://docs.google.com/spreadsheet/pub?key=0Al9lLCZTXJQ2dF9LU0NMbVkwcEZuV2R1TzRuOFhVZ2c&single=true&gid=12&output=html"
+        },
+
+        {
+            "image": "chart_average_fseog.png",
+            "title": "$ Federal Award per recipient (Federal Supplemental Educational Opportunity Grant, FSEOG): 2012-13",
+            "homepage": "https://docs.google.com/spreadsheet/pub?key=0Al9lLCZTXJQ2dF9LU0NMbVkwcEZuV2R1TzRuOFhVZ2c&single=true&gid=9&output=html"
+        },
+        {
+            "image": "chart_recipients_fseog.png",
+            "title": "Recipients (Federal Supplemental Educational Opportunity Grant, FSEOG): 2012-13",
+            "homepage": "https://docs.google.com/spreadsheet/pub?key=0Al9lLCZTXJQ2dF9LU0NMbVkwcEZuV2R1TzRuOFhVZ2c&single=true&gid=13&output=html"
+        },
+        {
+            "image": "chart_award_fseog.png",
+            "title": "Total $ Federal Award per recipient (Federal Supplemental Educational Opportunity Grant, FSEOG): 2012-13",
+            "homepage": "https://docs.google.com/spreadsheet/pub?key=0Al9lLCZTXJQ2dF9LU0NMbVkwcEZuV2R1TzRuOFhVZ2c&single=true&gid=11&output=html"
+        },
+        {
+            "image": "2012-median-household-income.png",
+            "title": "Median Household Income for States and Puerto Rico: 2012",
+            "homepage": "http://www.census.gov/prod/2013pubs/acsbr12-02.pdf"
+        }
+    ]
+
+    function update_data(){
+        for (var i=0; i<json_demo_data.length; i++){
+            json = json_demo_data[i]
+            console.log(json)
+
+            var template = Hogan.compile(  $("#card-template").html() );
+            var output = template.render(json);
+            var element = $(output);
+            console.log(element)
+            $('#datasets').append(element);
+        }
+    }
+
+    //]]>
+    </script>
+
+
+            </head>
+            <body onload="update_data()">
+            <h1>Federal student aid data on Map(2012-13)</h1>
+            <p>This demo shows the average federal award from Federal Work-Study(FWS) at state level on Map. It also includes background information (ie. poverty and population) from US census.
+            </p>
+            <p>
+            The first two images use data from
+            <a href="http://studentaid.ed.gov/sites/default/files/fsawg/datacenter/library/2012-13CampusBasedFunding.xls">Campus-Based Volume Reports 2012-13</a> in
+            <a href="http://catalog.data.gov/dataset/federal-student-loan-program-data/resource/8e3faff7-6d8d-4cf5-8613-5668fb8c7bd8">Title IV Program Volume Reports</a>, which is published by the office of Federal Student Aid.
+            The last two images use data from U.S. Census Bureau, and data sources are linked right below the figure.
+            Note that state-level statistics are on the location of main campus of school, it does not directly reflect State Residency of the recipients.
+            </p>
+      <div style="overflow:hidden; width:1100px;text-align:center; ">
+        <div id="datasets"></div>
+        <span class="clear"></span>
+      </div>
+
+            </body>
+</html>

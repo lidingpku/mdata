@@ -1,0 +1,17 @@
+{
+    "title": "US Student loan, grant, and work-study programs data (1999 to 2014)",
+    "description": "XSL data covering student aid programs, e.g. Federal Work-Study(FWS) program, Federal Supplemental Educational Opportunity Grant(FSEOG) program, PERKINS loan, Federal PELL grant program, Teach program,  IRAQ AFGHANISTAN service grant program, Direct Loan (DL) program and Federal Family Education Loan (FFEL) Program.",
+    "source": "http://catalog.data.gov/dataset/federal-student-loan-program-data/resource/8e3faff7-6d8d-4cf5-8613-5668fb8c7bd8",
+    "image": "http://lidingpku.github.io/mdata/data/2014-federal-student-loan/2014-federal-student-loan.tile.png",
+    "homepage": "http://lidingpku.github.io/mdata/data/2014-federal-student-loan/2014-federal-student-loan.homepage.html",
+    "changes": [
+        "2014-03-28 DONE. generate google spreadsheet and create a map."
+    ],
+    "demos": [
+        {
+            "title": "Federal student aid data on Map(2012-13)",
+            "source": "http://lidingpku.github.io/mdata/data/2014-federal-student-loan/2014-federal-student-loan.demo.html",
+            "image": "http://lidingpku.github.io/mdata/data/2014-federal-student-loan/2014-federal-student-loan.tile.png"
+        }
+    ]
+}
